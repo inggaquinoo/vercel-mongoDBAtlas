@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express();
-
+//Modified 6/9/2023
 //CORS: Nos permite hacer solicitudes desde un origen diferente
 const cors = require('cors');
 
@@ -11,8 +11,10 @@ app.use(express.json());
 
 
 app.get("/",(req, res)=>{
-    res.send("Hola Tavo, tú estas conectado exitosamente a MongoDB")
+    res.send("Hola Tavo, tú estas conectado exitosamente a MongoDB - 17/5/2023")
 });
+
+app.use('/api/houses', houses);
 
 require('dotenv').config();
 
